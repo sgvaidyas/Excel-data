@@ -1,0 +1,72 @@
+Text Cleaning, Extraction, Combining & Splitting
+1. Employee names contain leading/trailing spaces and inconsistent spacing. Clean the Employee_Name column using TRIM() and create a cleaned-name column.
+2. Extract the first name from Employee_Name.
+3. Extract the last name from Employee_Name.
+4. Combine Employee_Name, Department, and Location into a single sentence such as:
+   "Aarav Sharma works in IT at Bengaluru."
+5. Extract the domain name from the Email column.
+
+IF / IFS / AND / OR / NOT
+6. Create a Salary Category:
+    - Salary ≥ ₹100,000 → High
+    - ₹50,000–₹99,999 → Medium
+    - Below ₹50,000 → Low
+7. Create an Employee Eligibility column using AND():
+    - Performance Rating ≥ 4
+    - Attendance ≥ 90%
+    - Leave Days ≤ 10
+   If all conditions are satisfied, display "Eligible", otherwise "Not Eligible".
+8. Create a Performance Category using IFS():
+    - Rating ≥ 4.5 → Excellent
+    - Rating ≥ 3.5 → Good
+    - Rating ≥ 2.5 → Average
+    - Below 2.5 → Needs Improvement
+
+
+IFERROR / IFBLANK / Error Handling
+8. Calculate Bonus Percentage using:
+   Bonus / Monthly Salary × 100
+   Use IFERROR() so that the formula does not display an error when salary data is missing or invalid.
+9. Create a column called Review Status:
+   - If Last_Review_Date is blank → "Review Pending"
+   - Otherwise → "Reviewed"
+10. Calculate Salary per Project using Monthly_Salary / Projects_Completed. Handle employees with zero projects using IFERROR().
+
+
+Calculate the total salary paid to employees in the IT department.
+
+Calculate the total salary of employees in Bengaluru whose performance is "Outstanding".
+
+Count the number of employees who:
+- Belong to IT
+- Have attendance above 90%
+
+Calculate the average salary of Full-Time employees in the Engineering department.
+
+Calculate the average Performance Rating of employees in Mumbai with more than 5 years of service
+
+
+
+Wildcards
+11. Using COUNTIF() and wildcards, find:
+    - Employees whose names start with "A"
+    - Employees whose names end with "a"
+    - Employees whose names contain "sh"
+    - Employees whose names have exactly 5 characters
+   Also demonstrate how ~ can be used to search for a literal wildcard character.
+   
+   
+Cleaning, Duplicates & Conditional Formatting
+22. Perform a complete HR data-cleaning and formatting exercise:
+    - Find and remove duplicate employee records.
+    - Identify blank Employee Names and Departments.
+    - Correct obvious department typos such as Financee, Saless, and Operatons.
+    - Remove unnecessary spaces.
+    - Apply Conditional Formatting:
+      - Salary → Data Bars
+      - Performance Rating → Icon Sets
+      - Attendance below 80% → highlight
+      - Performance = "Outstanding" → highlight
+      - Duplicate Employee Names → highlight
+    - Create a formula-based conditional formatting rule to highlight employees whose salary is above the average salary.
+    - Manage the rules so that the correct formatting takes priority.
